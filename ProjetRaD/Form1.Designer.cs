@@ -33,6 +33,7 @@
             this.start_webcam = new System.Windows.Forms.Button();
             this.webcam_img = new System.Windows.Forms.PictureBox();
             this.capture_image = new System.Windows.Forms.Button();
+            this.start_analyse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WebCamView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webcam_stream)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webcam_img)).BeginInit();
@@ -43,7 +44,7 @@
             this.WebCamView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WebCamView.Location = new System.Drawing.Point(0, 0);
             this.WebCamView.Name = "WebCamView";
-            this.WebCamView.Size = new System.Drawing.Size(800, 450);
+            this.WebCamView.Size = new System.Drawing.Size(698, 301);
             this.WebCamView.TabIndex = 0;
             this.WebCamView.TabStop = false;
             // 
@@ -83,11 +84,22 @@
             this.capture_image.UseVisualStyleBackColor = true;
             this.capture_image.Click += new System.EventHandler(this.capture_image_Click);
             // 
+            // start_analyse
+            // 
+            this.start_analyse.Location = new System.Drawing.Point(223, 12);
+            this.start_analyse.Name = "start_analyse";
+            this.start_analyse.Size = new System.Drawing.Size(85, 23);
+            this.start_analyse.TabIndex = 5;
+            this.start_analyse.Text = "Start analyse";
+            this.start_analyse.UseVisualStyleBackColor = true;
+            this.start_analyse.Click += new System.EventHandler(this.start_analyse_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(698, 301);
+            this.Controls.Add(this.start_analyse);
             this.Controls.Add(this.capture_image);
             this.Controls.Add(this.webcam_img);
             this.Controls.Add(this.start_webcam);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button start_webcam;
         private System.Windows.Forms.PictureBox webcam_img;
         private System.Windows.Forms.Button capture_image;
+        private System.Windows.Forms.Button start_analyse;
     }
 }
 
