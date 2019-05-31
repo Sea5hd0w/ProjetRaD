@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.WebCamView = new System.Windows.Forms.PictureBox();
+            this.webcam_stream = new System.Windows.Forms.PictureBox();
+            this.start_webcam = new System.Windows.Forms.Button();
             this.webcam_img = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.capture_image = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WebCamView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webcam_stream)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webcam_img)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,35 +47,56 @@
             this.WebCamView.TabIndex = 0;
             this.WebCamView.TabStop = false;
             // 
+            // webcam_stream
+            // 
+            this.webcam_stream.Location = new System.Drawing.Point(12, 41);
+            this.webcam_stream.Name = "webcam_stream";
+            this.webcam_stream.Size = new System.Drawing.Size(313, 239);
+            this.webcam_stream.TabIndex = 1;
+            this.webcam_stream.TabStop = false;
+            // 
+            // start_webcam
+            // 
+            this.start_webcam.Location = new System.Drawing.Point(12, 12);
+            this.start_webcam.Name = "start_webcam";
+            this.start_webcam.Size = new System.Drawing.Size(108, 23);
+            this.start_webcam.TabIndex = 2;
+            this.start_webcam.Text = "Start WebCam";
+            this.start_webcam.UseVisualStyleBackColor = true;
+            this.start_webcam.Click += new System.EventHandler(this.start_webcam_Click);
+            // 
             // webcam_img
             // 
-            this.webcam_img.Location = new System.Drawing.Point(12, 41);
+            this.webcam_img.Location = new System.Drawing.Point(332, 41);
             this.webcam_img.Name = "webcam_img";
-            this.webcam_img.Size = new System.Drawing.Size(776, 397);
-            this.webcam_img.TabIndex = 1;
+            this.webcam_img.Size = new System.Drawing.Size(339, 246);
+            this.webcam_img.TabIndex = 3;
             this.webcam_img.TabStop = false;
             // 
-            // button1
+            // capture_image
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.capture_image.Location = new System.Drawing.Point(127, 12);
+            this.capture_image.Name = "capture_image";
+            this.capture_image.Size = new System.Drawing.Size(90, 23);
+            this.capture_image.TabIndex = 4;
+            this.capture_image.Text = "Capture image";
+            this.capture_image.UseVisualStyleBackColor = true;
+            this.capture_image.Click += new System.EventHandler(this.capture_image_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.capture_image);
             this.Controls.Add(this.webcam_img);
+            this.Controls.Add(this.start_webcam);
+            this.Controls.Add(this.webcam_stream);
             this.Controls.Add(this.WebCamView);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.WebCamView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webcam_stream)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webcam_img)).EndInit();
             this.ResumeLayout(false);
 
@@ -81,8 +105,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox WebCamView;
+        private System.Windows.Forms.PictureBox webcam_stream;
+        private System.Windows.Forms.Button start_webcam;
         private System.Windows.Forms.PictureBox webcam_img;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button capture_image;
     }
 }
 

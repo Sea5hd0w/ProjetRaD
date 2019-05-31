@@ -25,11 +25,16 @@ namespace ProjetRaD
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void start_webcam_Click(object sender, EventArgs e)
         {
             webcam = new WebCam();
-            webcam.InitializeWebCam(ref webcam_img);
+            webcam.InitializeWebCam(ref webcam_stream);
             webcam.Start();
+        }
+
+        private void capture_image_Click(object sender, EventArgs e)
+        {
+            webcam_img.Image = webcam_stream.Image;
         }
     }
 }
